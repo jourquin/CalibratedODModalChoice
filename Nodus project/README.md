@@ -8,7 +8,7 @@ This directory contain the complete Nodus project used to develop the modal choi
     - od_nuts2_road, od_nuts2_iww and od_nuts2_rail for the European NUTS 2 model
     - od_nuts3_road, od_nuts3_iww and od_nuts3_rail for the Benelux+ NUTS3 model
     - od_del3_road, od_del3_iww and od_del3_rail for the German NUTS3 model
-- Merge the modal matrices for each model using the `MergeOD.sql` script in the Nodus SQL console.
+- Merge the modal matrices for each model using the `MergeOD.sql` script in the Nodus SQL console. Instead, you can also directly import the provided already merged matrices od_nuts2, od_nuts3 and od_del3.
 - Perform the uncalibrated assignments scenarios 1, 2 and 3, for modes 1, 2 and 3.
 - Run the `CreateBiogemeInput.sql` script in the Nodus SQL console. This creates the input tables for the Python/Biogeme script.
 - Run the Python/Biogeme script to estimate the parameters.
