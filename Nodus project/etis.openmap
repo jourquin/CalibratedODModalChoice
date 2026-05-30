@@ -1,0 +1,33 @@
+openmap.layers=Etis2006L2 Etis2006L3 OsmTiles
+openmap.startUpLayers=Etis2006L2
+
+Etis2006L2.class=com.bbn.openmap.layer.shape.FastEsriLayer
+Etis2006L2.prettyName=Etis2006 L2 regions
+Etis2006L2.lineColor=ff606060
+Etis2006L2.fillColor=fff2f2f2
+Etis2006L2.shp=./etis2006l2.shp
+
+Etis2006L3.class=com.bbn.openmap.layer.shape.FastEsriLayer
+Etis2006L3.prettyName=Etis2006 L3 regions
+Etis2006L3.lineColor=ff606060
+Etis2006L3.fillColor=ffffffff
+Etis2006L3.shp=./etis2006l3.shp
+
+# Map Tile Layer, using OpenStreetMap tiles
+# The NodusMapTileLayer is an extension of OpenMap's MapTileLayer. See API doc for more info.
+OsmTiles.class=com.bbn.openmap.layer.imageTile.NodusMapTileLayer
+OsmTiles.prettyName=OpenStreetMap Tiles
+OsmTiles.rootDir=https://b.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png 
+#OsmTiles.rootDir=https://tile.openstreetmap.org/{z}/{x}/{y}.png 
+OsmTiles.tileFactory=com.bbn.openmap.dataAccess.mapTile.StandardMapTileFactory
+OsmTiles.mapTileTransform=com.bbn.openmap.dataAccess.mapTile.OSMMapTileCoordinateTransform
+OsmTiles.emptyTileHandler=com.bbn.openmap.dataAccess.mapTile.ShpFileEmptyTileHandler
+# Define ocean/background colors for tiles
+OsmTiles.background.fillColor=FFFFFF
+OsmTiles.background.lineColor=FFFFFF
+# Define land color for tiles (empty tiles on land, too)
+OsmTiles.land.fillColor=DECD8B
+OsmTiles.land.lineColor=DECD8B
+# Define zoom level to limit handler response - zoom in past this provides empty coverage (clear)
+OsmTiles.noCoverageZoom=13
+OsmTiles.transparency=1.0

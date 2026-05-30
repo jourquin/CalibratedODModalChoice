@@ -1,0 +1,649 @@
+
+#-----------------------------------------------------   
+# Cost functions 
+#-----------------------------------------------------   
+
+# Means caption
+# Means 1 = CEMT 1
+# Means 2 = CEMT 2
+# Means 3 = CEMT 3
+# Means 4 = CEMT 4
+# Means 5 = CEMT 5a
+# Means 6 = CEMT 5b
+# Means 7 = CEMT 6
+
+MAX_DETOUR_REF_MODE = 1
+
+# Monetary value per ton.km of C02
+# If 80€/ton
+co2_cost = 0.008
+
+@paramTable=modal_choice_params_model3
+@MC.ApplyCalibration=true
+
+# Average speed per mode
+AVGSPEED2 = 8
+AVGSPEED3 = 80
+AVGSPEED1 = 66
+
+ld@1,1 = 0.25*3600
+
+ld@3,1 = 24*3600
+
+ld@2,2 = 9.7*3600
+ld@2,2.3 = 8.8*3600
+ld@2,2.8 = 8.9*3600
+
+ld@2,3 = 11.2*3600
+ld@2,3.3 = 6.7*3600
+ld@2,3.8 = 7.1*3600
+
+ld@2,4 = 11.9*3600
+ld@2,4.3 = 5.0*3600
+ld@2,4.8 = 5.6*3600
+
+ld@2,5 = 10.5*3600
+ld@2,5.3 = 2.5*3600
+ld@2,5.8 = 3.2*3600
+
+ld@2,6 = 20.3*3600
+ld@2,6.3 = 16.5*3600
+ld@2,6.8 = 16.9*3600
+
+ld@2,7 = 30.3*3600
+ld@2,7.3 = 36.5*3600
+ld@2,7.8 = 35.9*3600
+
+ul@1,1 = 0.25*3600
+
+ul@3,1 = 24*3600
+
+ul@2,2 = 9.7*3600
+ul@2,2.3 = 8.8*3600
+ul@2,2.8 = 8.9*3600
+
+ul@2,3 = 11.2*3600
+ul@2,3.3 = 6.7*3600
+ul@2,3.8 = 7.1*3600
+
+ul@2,4 = 11.9*3600
+ul@2,4.3 = 5.0*3600
+ul@2,4.8 = 5.6*3600
+
+ul@2,5 = 10.5*3600
+ul@2,5.3 = 2.5*3600
+ul@2,5.8 = 3.2*3600
+
+ul@2,6 = 20.3*3600
+ul@2,6.3 = 16.5*3600
+ul@2,6.8 = 16.9*3600
+
+ul@2,7 = 30.3*3600
+ul@2,7.3 = 36.5*3600
+ul@2,7.8 = 35.9*3600
+
+
+
+AVGLOAD.2,2.0 = 277.05
+AVGLOAD.2,3.0 = 646.22
+AVGLOAD.2,4.0 = 952.17
+AVGLOAD.2,5.0 = 1347.49
+AVGLOAD.2,6.0 = 2218.69
+AVGLOAD.2,7.0 = 4305.696
+
+AVGLOAD.2,2.1 = 291.27
+AVGLOAD.2,3.1 = 691.03
+AVGLOAD.2,4.1 = 1009.30
+AVGLOAD.2,5.1 = 1487.60
+AVGLOAD.2,6.1 = 25.03
+AVGLOAD.2,7.1 = 5190.329
+
+AVGLOAD.2,2.2 = 292.21
+AVGLOAD.2,3.2 = 694.00
+AVGLOAD.2,4.2 = 1013.09
+AVGLOAD.2,5.2 = 1496.89
+AVGLOAD.2,6.2 = 2530.42
+AVGLOAD.2,7.2 = 5249.00
+
+AVGLOAD.2,2.3 = 283.92
+AVGLOAD.2,3.3 = 754.20
+AVGLOAD.2,4.3 = 938.57
+AVGLOAD.2,5.3 = 1389.94
+AVGLOAD.2,6.3 = 2244.54
+AVGLOAD.2,7.3 = 5407.772
+
+AVGLOAD.2,2.4 = 292.21
+AVGLOAD.2,3.4 = 694.00
+AVGLOAD.2,4.4 = 1013.09
+AVGLOAD.2,5.4 = 1496.89
+AVGLOAD.2,6.4 = 2530.42
+AVGLOAD.2,7.4 = 5249.00
+
+AVGLOAD.2,2.5 = 243.43
+AVGLOAD.2,3.5 = 540.29
+AVGLOAD.2,4.5 = 817.13
+AVGLOAD.2,5.5 = 1016.29
+AVGLOAD.2,6.5 = 1527.64
+AVGLOAD.2,7.5 = 2214.586
+
+AVGLOAD.2,2.6 = 291.91
+AVGLOAD.2,3.6 = 693.03
+AVGLOAD.2,4.6 = 1011.84
+AVGLOAD.2,5.6 = 1493.84
+AVGLOAD.2,6.6 = 2524.06
+AVGLOAD.2,7.6 = 5229.757
+
+AVGLOAD.2,2.7 = 292.21
+AVGLOAD.2,3.7 = 694.00
+AVGLOAD.2,4.7 = 1013.09
+AVGLOAD.2,5.7 = 1496.89
+AVGLOAD.2,6.7 = 2530.42
+AVGLOAD.2,7.7 = 5249.00
+
+AVGLOAD.2,2.8 = 282.57
+AVGLOAD.2,3.8 = 741.78
+AVGLOAD.2,4.8 = 937.02
+AVGLOAD.2,5.8 = 1378.97
+AVGLOAD.2,6.8 = 2227.58
+AVGLOAD.2,7.8 = 5259.722
+
+AVGLOAD.2,2.9 = 243.43
+AVGLOAD.2,3.9 = 540.29
+AVGLOAD.2,4.9 = 817.13
+AVGLOAD.2,5.9 = 1016.29
+AVGLOAD.2,6.9 = 1527.64
+AVGLOAD.2,7.9 = 2214.586
+
+# Average loads rail, in tons (1 if not defined)
+
+AVGLOAD.3,1.0 = 568.41
+AVGLOAD.3,1.1 = 966.12
+AVGLOAD.3,1.2 = 975.00
+AVGLOAD.3,1.3 = 529.62
+AVGLOAD.3,1.4 = 975.00
+AVGLOAD.3,1.5 = 372.75
+AVGLOAD.3,1.6 = 869.82
+AVGLOAD.3,1.7 = 975.00
+AVGLOAD.3,1.8 = 461.15
+AVGLOAD.3,1.9 = 372.75
+
+# Average loads road, in tons (1 if not defined)
+AVGLOAD.1,1.0 = 14.88
+AVGLOAD.1,1.1 = 14.88
+AVGLOAD.1,1.2 = 13.94
+AVGLOAD.1,1.3 = 16.58
+AVGLOAD.1,1.4 = 13.94
+AVGLOAD.1,1.5 = 15.29
+AVGLOAD.1,1.6 = 14.27
+AVGLOAD.1,1.7 = 13.94
+AVGLOAD.1,1.8 = 15.38
+AVGLOAD.1,1.9 = 15.29
+
+
+# Loading costs IWT       (euro/ton)
+
+Loading_M02m02 = 0.00
+Loading_M02m03 = 0.00
+Loading_M02m04 = 0.00
+Loading_M02m05 = 0.00
+Loading_M02m06 = 0.00
+Loading_M02m07 = 0.00
+
+Loading_M02m02.0 = 1.6636
+Loading_M02m03.0 = 1.2215
+Loading_M02m04.0 = 1.2159
+Loading_M02m05.0 = 1.2730
+Loading_M02m06.0 = 1.3316
+Loading_M02m07.0 = 3.1635
+
+Loading_M02m02.1 = 1.5465
+Loading_M02m03.1 = 1.1155
+Loading_M02m04.1 = 1.1301
+Loading_M02m05.1 = 1.0847
+Loading_M02m06.1 = 1.1299
+Loading_M02m07.1 = 2.1132
+
+Loading_M02m02.2 = 1.5387
+Loading_M02m03.2 = 1.1085
+Loading_M02m04.2 = 1.1244
+Loading_M02m05.2 = 1.0722
+Loading_M02m06.2 = 1.1166
+Loading_M02m07.2 = 2.0436
+
+Loading_M02m02.3 = 2.0655
+Loading_M02m03.3 = 1.1666
+Loading_M02m04.3 = 1.0862
+Loading_M02m05.3 = 0.8682
+Loading_M02m06.3 = 1.6209
+Loading_M02m07.3 = 2.2156
+
+Loading_M02m02.4 = 1.5387
+Loading_M02m03.4 = 1.1085
+Loading_M02m04.4 = 1.1244
+Loading_M02m05.4 = 1.0722
+Loading_M02m06.4 = 1.1166
+Loading_M02m07.4 = 2.0436
+
+Loading_M02m02.5 = 1.9405
+Loading_M02m03.5 = 1.4721
+Loading_M02m04.5 = 1.4185
+Loading_M02m05.5 = 1.7181
+Loading_M02m06.5 = 1.8083
+Loading_M02m07.5 = 5.6462
+
+Loading_M02m02.6 = 1.5413
+Loading_M02m03.6 = 1.1108
+Loading_M02m04.6 = 1.1263
+Loading_M02m05.6 = 1.0763
+Loading_M02m06.6 = 1.1210
+Loading_M02m07.6 = 2.0664
+
+Loading_M02m02.7 = 1.5387
+Loading_M02m03.7 = 1.1085
+Loading_M02m04.7 = 1.1244
+Loading_M02m05.7 = 1.0722
+Loading_M02m06.7 = 1.1166
+Loading_M02m07.7 = 2.0436
+
+Loading_M02m02.8 = 2.0334
+Loading_M02m03.8 = 1.1125
+Loading_M02m04.8 = 1.1027
+Loading_M02m05.8 = 0.9158
+Loading_M02m06.8 = 1.6036
+Loading_M02m07.8 = 2.3573
+
+Loading_M02m02.9 = 1.9405
+Loading_M02m03.9 = 1.4721
+Loading_M02m04.9 = 1.4185
+Loading_M02m05.9 = 1.7181
+Loading_M02m06.9 = 1.8083
+Loading_M02m07.9 = 5.6462
+
+# Loading costs rail (euro/ton)
+
+Loading_M03m01 = 0.00
+Loading_M03m01.0 = 9.66
+Loading_M03m01.1 = 2.36
+Loading_M03m01.2 = 2.20
+Loading_M03m01.3 = 4.54
+Loading_M03m01.4 = 2.20
+Loading_M03m01.5 = 13.25
+Loading_M03m01.6 = 4.13
+Loading_M03m01.7 = 2.20
+Loading_M03m01.8 = 8.34
+Loading_M03m01.9 = 13.25
+
+          
+# Loading costs road (euro/ton)              
+
+Loading_M01m01 = 0.00
+
+Loading_M01m01.0 = 2.7964
+Loading_M01m01.1 = 2.7971
+Loading_M01m01.2 = 2.2615
+Loading_M01m01.3 = 2.8097
+Loading_M01m01.4 = 2.2615
+Loading_M01m01.5 = 3.0314
+Loading_M01m01.6 = 2.4517
+Loading_M01m01.7 = 2.2615
+Loading_M01m01.8 = 2.9285
+Loading_M01m01.9 = 3.0314
+
+# Unloading costs IWT (euro/ton)           
+
+Unloading_M02m02 = 0.00
+Unloading_M02m03 = 0.00
+Unloading_M02m04 = 0.00
+Unloading_M02m05 = 0.00
+Unloading_M02m06 = 0.00
+Unloading_M02m07 = 0.00
+
+Unloading_M02m02.0 = 1.8772
+Unloading_M02m03.0 = 1.4472
+Unloading_M02m04.0 = 1.5007
+Unloading_M02m05.0 = 1.6108
+Unloading_M02m06.0 = 1.5664
+Unloading_M02m07.0 = 3.6089
+
+Unloading_M02m02.1 = 1.7319
+Unloading_M02m03.1 = 1.3167
+Unloading_M02m04.1 = 1.3719
+Unloading_M02m05.1 = 1.3704
+Unloading_M02m06.1 = 1.3238
+Unloading_M02m07.1 = 2.3957
+
+Unloading_M02m02.2 = 1.7222
+Unloading_M02m03.2 = 1.3080
+Unloading_M02m04.2 = 1.3633
+Unloading_M02m05.2 = 1.3545
+Unloading_M02m06.2 = 1.3077
+Unloading_M02m07.2 = 2.3153
+
+Unloading_M02m02.3 = 2.3000
+Unloading_M02m03.3 = 1.3766
+Unloading_M02m04.3 = 1.3419
+Unloading_M02m05.3 = 1.1965
+Unloading_M02m06.3 = 1.3781
+Unloading_M02m07.3 = 2.3674
+
+Unloading_M02m02.4 = 1.7222
+Unloading_M02m03.4 = 1.3080
+Unloading_M02m04.4 = 1.3633
+Unloading_M02m05.4 = 1.3545
+Unloading_M02m06.4 = 1.3077
+Unloading_M02m07.4 = 2.3153
+
+Unloading_M02m02.5 = 2.2209
+Unloading_M02m03.5 = 1.7558
+Unloading_M02m04.5 = 1.8053
+Unloading_M02m05.5 = 2.1791
+Unloading_M02m06.5 = 2.1399
+Unloading_M02m07.5 = 6.4767
+
+Unloading_M02m02.6 = 1.7254
+Unloading_M02m03.6 = 1.3109
+Unloading_M02m04.6 = 1.3661
+Unloading_M02m05.6 = 1.3597
+Unloading_M02m06.6 = 1.3129
+Unloading_M02m07.6 = 2.3417
+
+Unloading_M02m02.7 = 1.7222
+Unloading_M02m03.7 = 1.3080
+Unloading_M02m04.7 = 1.3633
+Unloading_M02m05.7 = 1.3545
+Unloading_M02m06.7 = 1.3077
+Unloading_M02m07.7 = 2.3153
+
+Unloading_M02m02.8 = 2.2673
+Unloading_M02m03.8 = 1.3897
+Unloading_M02m04.8 = 1.3633
+Unloading_M02m05.8 = 1.2476
+Unloading_M02m06.8 = 1.4079
+Unloading_M02m07.8 = 2.5450
+
+Unloading_M02m02.9 = 2.2209
+Unloading_M02m03.9 = 1.7558
+Unloading_M02m04.9 = 1.8053
+Unloading_M02m05.9 = 2.1791
+Unloading_M02m06.9 = 2.1399
+Unloading_M02m07.9 = 6.4767
+
+
+# Unloading costs rail (euro/ton)
+
+Unloading_M03m01 = 0.00
+Unloading_M03m01.0 = 9.66
+Unloading_M03m01.1 = 2.36
+Unloading_M03m01.2 = 2.20
+Unloading_M03m01.3 = 4.54
+Unloading_M03m01.4 = 2.20
+Unloading_M03m01.5 = 13.25
+Unloading_M03m01.6 = 4.13
+Unloading_M03m01.7 = 2.20
+Unloading_M03m01.8 = 8.34
+Unloading_M03m01.9 = 13.25
+
+
+# Unloading costs road (euro/ton)
+                
+Unloading_M01m01 = 0
+Unloading_M01m01.0 = 2.6488
+Unloading_M01m01.1 = 2.6487
+Unloading_M01m01.2 = 2.7293
+Unloading_M01m01.3 = 3.3913
+Unloading_M01m01.4 = 2.7293
+Unloading_M01m01.5 = 2.6135
+Unloading_M01m01.6 = 2.7007
+Unloading_M01m01.7 = 2.7293
+Unloading_M01m01.8 = 2.7479
+Unloading_M01m01.9 = 2.6135
+
+
+# Moving costs (euro/t.km) IWT              
+Moving_M02m02up = 0.00
+Moving_M02m03up = 0.00
+Moving_M02m04up = 0.00
+Moving_M02m05up = 0.00
+Moving_M02m06up = 0.00
+Moving_M02m07up = 0.00
+
+Moving_M02m02down = 0.00
+Moving_M02m03down = 0.00
+Moving_M02m04down = 0.00
+Moving_M02m05down = 0.00
+Moving_M02m06down = 0.00
+Moving_M02m07down = 0.00
+
+Moving_M02m02up.0 = 0.0240
+Moving_M02m03up.0 = 0.0135
+Moving_M02m04up.0 = 0.0122
+Moving_M02m05up.0 = 0.0135
+Moving_M02m06up.0 = 0.0127
+Moving_M02m07up.0 = 0.0149
+
+Moving_M02m02down.0 = 0.0153
+Moving_M02m03down.0 = 0.0077
+Moving_M02m04down.0 = 0.0071
+Moving_M02m05down.0 = 0.0079
+Moving_M02m06down.0 = 0.0068
+Moving_M02m07down.0 = 0.0080
+
+Moving_M02m02up.1 = 0.0228
+Moving_M02m03up.1 = 0.0126
+Moving_M02m04up.1 = 0.0114
+Moving_M02m05up.1 = 0.0120
+Moving_M02m06up.1 = 0.0106
+Moving_M02m07up.1 = 0.0111
+
+Moving_M02m02down.1 = 0.0146
+Moving_M02m03down.1 = 0.0072
+Moving_M02m04down.1 = 0.0067
+Moving_M02m05down.1 = 0.0070
+Moving_M02m06down.1 = 0.0056
+Moving_M02m07down.1 = 0.0059
+
+Moving_M02m02up.2 = 0.0228
+Moving_M02m03up.2 = 0.0126
+Moving_M02m04up.2 = 0.0114
+Moving_M02m05up.2 = 0.0119
+Moving_M02m06up.2 = 0.0104
+Moving_M02m07up.2 = 0.0108
+
+Moving_M02m02down.2 = 0.0145
+Moving_M02m03down.2 = 0.0072
+Moving_M02m04down.2 = 0.0066
+Moving_M02m05down.2 = 0.0069
+Moving_M02m06down.2 = 0.0055
+Moving_M02m07down.2 = 0.0057
+
+Moving_M02m02up.3 = 0.0307
+Moving_M02m03up.3 = 0.0176
+Moving_M02m04up.3 = 0.0184
+Moving_M02m05up.3 = 0.0161
+Moving_M02m06up.3 = 0.0149
+Moving_M02m07up.3 = 0.0121
+
+Moving_M02m02down.3 = 0.0199
+Moving_M02m03down.3 = 0.0106
+Moving_M02m04down.3 = 0.0113
+Moving_M02m05down.3 = 0.0097
+Moving_M02m06down.3 = 0.0083
+Moving_M02m07down.3 = 0.0065
+
+Moving_M02m02up.4 = 0.0228
+Moving_M02m03up.4 = 0.0126
+Moving_M02m04up.4 = 0.0114
+Moving_M02m05up.4 = 0.0119
+Moving_M02m06up.4 = 0.0104
+Moving_M02m07up.4 = 0.0108
+
+Moving_M02m02down.4 = 0.0145
+Moving_M02m03down.4 = 0.0072
+Moving_M02m04down.4 = 0.0066
+Moving_M02m05down.4 = 0.0069
+Moving_M02m06down.4 = 0.0055
+Moving_M02m07down.4 = 0.0057
+
+Moving_M02m02up.5 = 0.0268
+Moving_M02m03up.5 = 0.0154
+Moving_M02m04up.5 = 0.0139
+Moving_M02m05up.5 = 0.0169
+Moving_M02m06up.5 = 0.0177
+Moving_M02m07up.5 = 0.0238
+
+Moving_M02m02down.5 = 0.0171
+Moving_M02m03down.5 = 0.0090
+Moving_M02m04down.5 = 0.0081
+Moving_M02m05down.5 = 0.0102
+Moving_M02m06down.5 = 0.0097
+Moving_M02m07down.5 = 0.0131
+
+Moving_M02m02up.6 = 0.0228
+Moving_M02m03up.6 = 0.0126
+Moving_M02m04up.6 = 0.0114
+Moving_M02m05up.6 = 0.0119
+Moving_M02m06up.6 = 0.0105
+Moving_M02m07up.6 = 0.0109
+
+Moving_M02m02down.6 = 0.0145
+Moving_M02m03down.6 = 0.0072
+Moving_M02m04down.6 = 0.0066
+Moving_M02m05down.6 = 0.0069
+Moving_M02m06down.6 = 0.0056
+Moving_M02m07down.6 = 0.0058
+
+Moving_M02m02up.7 = 0.0228
+Moving_M02m03up.7 = 0.0126
+Moving_M02m04up.7 = 0.0114
+Moving_M02m05up.7 = 0.0119
+Moving_M02m06up.7 = 0.0104
+Moving_M02m07up.7 = 0.0108
+
+Moving_M02m02down.7 = 0.0145
+Moving_M02m03down.7 = 0.0072
+Moving_M02m04down.7 = 0.0066
+Moving_M02m05down.7 = 0.0069
+Moving_M02m06down.7 = 0.0055
+Moving_M02m07down.7 = 0.0057
+
+Moving_M02m02up.8 = 0.0301
+Moving_M02m03up.8 = 0.0173
+Moving_M02m04up.8 = 0.0179
+Moving_M02m05up.8 = 0.0159
+Moving_M02m06up.8 = 0.0148
+Moving_M02m07up.8 = 0.0126
+
+Moving_M02m02down.8 = 0.0195
+Moving_M02m03down.8 = 0.0103
+Moving_M02m04down.8 = 0.0109
+Moving_M02m05down.8 = 0.0096
+Moving_M02m06down.8 = 0.0082
+Moving_M02m07down.8 = 0.0068
+
+Moving_M02m02up.9 = 0.0268
+Moving_M02m03up.9 = 0.0154
+Moving_M02m04up.9 = 0.0139
+Moving_M02m05up.9 = 0.0169
+Moving_M02m06up.9 = 0.0177
+Moving_M02m07up.9 = 0.0238
+
+Moving_M02m02down.9 = 0.0171
+Moving_M02m03down.9 = 0.0090
+Moving_M02m04down.9 = 0.0081
+Moving_M02m05down.9 = 0.0102
+Moving_M02m06down.9 = 0.0097
+Moving_M02m07down.9 = 0.0131
+
+# Moving costs (euro/t.km) rail                
+
+Moving_M03m01 = 0
+Moving_M03m01.0 = 0.0234
+Moving_M03m01.1 = 0.0152
+Moving_M03m01.2 = 0.0150
+Moving_M03m01.3 = 0.0199
+Moving_M03m01.4 = 0.0150
+Moving_M03m01.5 = 0.0275
+Moving_M03m01.6 = 0.0172
+Moving_M03m01.7 = 0.0150
+Moving_M03m01.8 = 0.0232
+Moving_M03m01.9 = 0.0275
+
+# Moving costs (euro/t.km) road
+
+Moving_M01m01 = 0
+Moving_M01m01.0 = 0.0634
+Moving_M01m01.1 = 0.0634
+Moving_M01m01.2 = 0.0676
+Moving_M01m01.3 = 0.0606
+Moving_M01m01.4 = 0.0676
+Moving_M01m01.5 = 0.0615
+Moving_M01m01.6 = 0.0661
+Moving_M01m01.7 = 0.0676
+Moving_M01m01.8 = 0.0619
+Moving_M01m01.9 = 0.0615
+
+#- Functions -----------------------------------------               
+
+
+# load.ModeMeans       
+
+ld.2,2 = Loading_M02m02
+ld.2,3 = Loading_M02m03
+ld.2,4 = Loading_M02m04
+ld.2,5 = Loading_M02m05
+ld.2,6 = Loading_M02m06
+ld.2,7 = Loading_M02m07
+
+ld.3,1 = Loading_M03m01
+
+ld.1,1 = Loading_M01m01
+
+
+# unload.ModeMeans  
+
+ul.2,2 = Unloading_M02m02
+ul.2,3 = Unloading_M02m03
+ul.2,4 = Unloading_M02m04
+ul.2,5 = Unloading_M02m05
+ul.2,6 = Unloading_M02m06
+ul.2,7 = Unloading_M02m07
+
+ul.3,1 = Unloading_M03m01
+
+ul.1,1 = Unloading_M01m01
+
+
+#transit.ModeMeans    
+
+tr.2,2 = 0
+tr.2,3 = 0
+tr.2,4 = 0
+tr.2,5 = 0
+tr.2,6 = 0
+tr.2,7 = 0
+
+tr.3,1 = 0
+
+tr.1,1 = 0
+
+
+#moving.modeMeans  
+mv.1,1 = (AVGSPEED1/SPEED)*LENGTH*Moving_M01m01
+
+#mv.2,2 = (AVGSPEED2/SPEED)*LENGTH*((Moving_M02m02up+Moving_M02m02down)/2)
+mv.2,3 = (AVGSPEED2/SPEED)*LENGTH*((Moving_M02m03up+Moving_M02m03down)/2)
+#mv.2,4 = (AVGSPEED2/SPEED)*LENGTH*((Moving_M02m04up+Moving_M02m04down)/2)
+#mv.2,5 = (AVGSPEED2/SPEED)*LENGTH*((Moving_M02m05up+Moving_M02m05down)/2)
+#mv.2,6 = (AVGSPEED2/SPEED)*LENGTH*((Moving_M02m06up+Moving_M02m06down)/2)
+#mv.2,7 = (AVGSPEED2/SPEED)*LENGTH*((Moving_M02m07up+Moving_M02m07down)/2)
+
+mv.3,1 = (AVGSPEED3/SPEED)*LENGTH*Moving_M03m01
+
+mv@1,1 = 3600*LENGTH/SPEED
+mv@2,2 = 3600*LENGTH/SPEED
+mv@2,3 = 3600*LENGTH/SPEED
+mv@2,4 = 3600*LENGTH/SPEED
+mv@2,5 = 3600*LENGTH/SPEED
+mv@2,6 = 3600*LENGTH/SPEED
+mv@2,7 = 3600*LENGTH/SPEED
+mv@3,1 = 3600*LENGTH/SPEED

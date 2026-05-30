@@ -1,0 +1,26 @@
+jdbc.driver=org.mariadb.jdbc.Driver
+jdbc.user=nodus
+jdbc.password=nodus
+jdbc.url=jdbc:mariadb://localhost/calibratedod?sessionVariables=default_storage_engine=MYISAM
+
+network.nodes=centroidsl2 centroidsl3 ports terminals iww_points rail_points road_points
+network.links=iww_polylines rail_polylines road_polylines iww_conl2 rail_conl2 road_conl2 iww_conl3 rail_conl3 road_conl3
+
+centroidsl2.prettyName = L2 Centroids
+centroidsl3.prettyName = L3 Centroids
+ports.prettyName = Ports
+terminals.prettyName = Terminals
+iww_points.prettyName = IWW (points)
+iww_polylines.prettyName = Waterways
+rail_points.prettyName = Rail (points)
+rail_polylines.prettyName = Railways
+road_points.prettyName = Road (points)
+road_polylines.prettyName = Roads
+iww_conl2.prettyName = IWW (L2 connectors)
+rail_conl2.prettyName = Rail (L2 connectors)
+road_conl2.prettyName = Road (L2 connectors)
+iww_conl3.prettyName = IWW (L3 connectors)
+rail_conl3.prettyName = Rail (L3 connectors)
+road_conl3.prettyName = Road (L3 connectors)
+
+openmap.layers=etis
