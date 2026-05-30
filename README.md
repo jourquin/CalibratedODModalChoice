@@ -160,6 +160,8 @@ The file `run_parameters.md` records the command-line parameters used to generat
 
 The complete Nodus project used to develop the model, including the digitised maps, the demand matrices and the ``.costs`` files. It also contains a ``README.md``file that explains how to run it. 
 
+The raw digitised networks and the base OD matrices are retrieved from the [ETIS Plus European Research Project](https://doi.org/10.13140/RG.2.2.16768.25605).
+
 ## Nodus plugin
 
 The `Nodus plugin/` directory contains:
