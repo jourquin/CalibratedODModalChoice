@@ -21,7 +21,7 @@ The purpose of the framework is not only to reproduce aggregate modal shares, bu
 │   ├── biogeme_input_model2.sql
 │   └── biogeme_input_model3.sql
 │
-├── Python Biogeme script/
+├── Python Biogeme scripts/
 │   ├── CalibratedODModalChoice.py
 │   ├── SimpleLogCostTimeODModalChoice.py 
 │   └── BiogemeUtils.py
@@ -96,7 +96,7 @@ Python Biogeme script/CalibratedODModalChoice.py
 The helper functions are stored in:
 
 ```text
-Python Biogeme script/BiogemeUtils.py
+Python Biogeme scripts/BiogemeUtils.py
 ```
 
 The script requires Python and the main scientific Python stack, together with Biogeme and a MySQL/MariaDB connector. A typical environment includes:
@@ -117,7 +117,7 @@ Results/run_parameters.md
 A typical command has the following form:
 
 ```bash
-python "Python Biogeme script/CalibratedODModalChoice.py" \
+python "Python Biogeme scripts/CalibratedODModalChoice.py" \
   --models 1,2,3 \
   --user <mysql_user> \
   --password <mysql_password> \
