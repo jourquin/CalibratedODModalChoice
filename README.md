@@ -23,6 +23,7 @@ The purpose of the framework is not only to reproduce aggregate modal shares, bu
 │
 ├── Python Biogeme script/
 │   ├── CalibratedODModalChoice.py
+│   ├── SimpleLogCostTimeODModalChoice.py 
 │   └── BiogemeUtils.py
 │
 ├── Results/
@@ -131,6 +132,9 @@ python "Python Biogeme script/CalibratedODModalChoice.py" \
 Users should adapt the database credentials, output directory, and runtime options to their local installation.
 
 The script produces estimation results, validation reports, calibration constants, comparison tables, and optional database parameter tables for the Nodus plugin.
+
+The second script, `SimpleLogCostTimeODModalChoice.py`, implements the conventional logarithmic cost-and-time multinomial logit model used as a benchmark. It uses the same input observations, technical-availability rules, annual-tonnage weights, aggregate-share likelihood and OD-cell evaluation metrics as the main script, but replaces the richer behavioural specification with a simpler utility based on logarithmic modal cost, mode-specific logarithmic moving time and commodity-group-specific modal constants. It is provided to isolate the contribution of the distance splines and the rail market-structure indicator to pre-calibration model performance. 
+
 
 
 ## Results
