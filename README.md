@@ -1,6 +1,9 @@
 # Calibrated OD Modal-Choice Framework for European Multimodal Freight Models
 
-This repository contains the input data, Python/Biogeme estimation script, main results, and a [Nodus](https://github.com/jourquin/Nodus) modal-choice plugin associated with the calibrated modal-choice framework implemented in the Python script.
+
+This repository contains the input data, Python/Biogeme estimation scripts, main results, and a [Nodus](https://github.com/jourquin/Nodus) modal-choice plugin associated to the paper entitled [From modal-choice estimation to freight OD-matrix assignment: a calibrated framework for European multimodal transport models](https://link.springer.com/article/10.1186/s12544-026-00863-9#data-availability) published in [European Transport Research Review](https://link.springer.com/journal/12544) on October 29, 2026.
+
+
 
 The framework estimates a freight modal-choice model for road, inland waterway transport (IWW), and rail using aggregate OD-commodity matrices. It combines:
 
